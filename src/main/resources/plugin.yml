@@ -1,0 +1,6 @@
+name: MinecraftPaperPlugin
+version: '${project.version}'
+main: plugintutorial.me.jaymar.Me.jaymar
+api-version: 1.19
+authors: [ jay, rey ]
+description: paper plugin
