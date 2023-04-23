@@ -1,5 +1,6 @@
-package plugintutorial.me.jaymar.Me.Listener;
+package plugintutorial.me.jaymar.Me.Loaders;
 
+import plugintutorial.me.jaymar.Me.Listener.*;
 import plugintutorial.me.jaymar.Me.jaymar;
 
 public class ListenerLoaderClass {
@@ -9,5 +10,6 @@ public class ListenerLoaderClass {
         mainPlugin.getServer().getPluginManager().registerEvents(new JoinLeaveEvent(), mainPlugin);
         mainPlugin.getServer().getPluginManager().registerEvents(new AttackSomethingEvent(), mainPlugin);
         mainPlugin.getServer().getPluginManager().registerEvents(new ConsumeSomething(), mainPlugin);
+        mainPlugin.getServer().getPluginManager().registerEvents(new BlockBreak(), mainPlugin);
     }
 }
