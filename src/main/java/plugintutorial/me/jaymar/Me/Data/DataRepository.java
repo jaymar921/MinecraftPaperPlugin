@@ -38,6 +38,7 @@ public class DataRepository {
 
         // load the custom items directly
         customItems = (List<CustomItem>) mainPlugin.getConfig().getList("MY_CUSTOM_ITEM");
+        customItems.removeAll(Collections.singleton(null)); // remove all nulls if there is any
 
         PLAYER_DEFAULT_DAMAGE = mainPlugin.getConfig().getInt("PLAYER_DEFAULT_DAMAGE");
     }

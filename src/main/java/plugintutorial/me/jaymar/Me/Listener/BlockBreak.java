@@ -17,6 +17,19 @@ public class BlockBreak implements Listener {
         item.ITEM_ID = new Random().nextInt(100000,999999);
         item.ITEM_NAME = event.getBlock().getType().name();
 
-        DataRepository.getCustomItems().add(item);
+        boolean exist = false;
+        for(CustomItem c_item : DataRepository.getCustomItems()){
+            if(c_item == null)
+                continue;
+            if(c_item.ITEM_NAME.equalsIgnoreCase(item.ITEM_NAME)){
+                exist = true;
+            }
+        }
+        if(!exist){
+            DataRepository.getCustomItems().add(item);
+            event.getPlayer().sendMessage("The block was added in the list");
+        }else{
+            event.getPlayer().sendMessage("The block already exist");
+        }
     }
 }
